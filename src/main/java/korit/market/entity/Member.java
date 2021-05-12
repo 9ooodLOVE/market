@@ -1,7 +1,7 @@
 package korit.market.entity;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
-import korit.market.member.Role;
+import korit.market.entity.Role;
 import lombok.*;
 
 import javax.persistence.*;
@@ -26,6 +26,7 @@ import javax.persistence.*;
 public class Member {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memberNo;
 
     private String memberId;
@@ -33,6 +34,8 @@ public class Member {
     private String memberPwd;
 
     private String memberName;
+
+    private boolean fromSocial;
 
     private String phoneNumber;
 
@@ -56,9 +59,9 @@ public class Member {
         this.role = role ;
     }
 
-    public String getRoleKey() {
-        return this.role.getKey();
-    }
-
+//    public String getRoleKey() {
+//        return this.role.getKey();
+//    }
+//
 }
 

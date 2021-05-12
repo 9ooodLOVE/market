@@ -1,4 +1,4 @@
-package korit.market.member;
+package korit.market.entity;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -7,8 +7,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Role {
 
-    GUEST("ORLE_GUEST", "손님"),
-    USER("ROLE_USER", "일반 사용자");
+    GUEST("ROLE_GUEST", "손님"),
+    MEMBER("ROLE_MEMBER", "일반 사용자"),
+    ADMIN( "ROLE_ADMIN", "관리자");
 
     private final String key;
     private final String title;
